@@ -4,10 +4,12 @@ import (
 	"bytes"
 	"fmt"
 	"os/exec"
+	"runtime"
 	"time"
 )
 
 func main() {
+	runtime.GOMAXPROCS(1)
 	start := time.Now()
 	var output bytes.Buffer
 	cmd := "./new"

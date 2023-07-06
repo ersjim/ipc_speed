@@ -1,34 +1,30 @@
 #!/bin/bash
 
-echo "compiling"
-gcc -o new new.c -O3 -g0 -march=native
-gcc -o shell shell.c -fsanitize=address -fsanitize=null -fsanitize=undefined -Wall -Wextra -g3 -Og
-go build main.go
-
-echo "testing php shell version"
-php ./shell.php
-
-echo
-echo "testing go shell version"
-./main
-
-echo
-echo "testing c shell version"
-./shell
-
-echo "cleaning up"
-rm -f new main shell
-
-echo
-echo
 echo ========================
 echo "run 'node new.js' in another window and press enter"
 echo ========================
 read
 
-echo "testing curl version"
-php ./curl.php
+echo "compiling"
+gcc -o new new.c -O3 -g0 -march=native
+gcc -o shell shell.c -g0 -O3 -march=native
+go build main.go
+
 echo
+php ./shell.php
+
+echo
+./main
+
+echo
+./shell
+
+echo
+php ./curl.php
+
+echo
+echo "cleaning up"
+rm -f new main shell
 echo "done"
 echo --------
 echo

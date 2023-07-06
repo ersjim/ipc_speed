@@ -29,7 +29,7 @@ int main() {
     }
 
     double cpu_time_used = (end.tv_sec - start.tv_sec) + (end.tv_nsec - start.tv_nsec) / 1E9;
-    printf("%d chars written. Ran %d times in %f seconds.\n", total_chars, i, cpu_time_used);
+    printf("C SHELL: Ran %d times in %f seconds.\n", i, cpu_time_used);
 
     return 0;
 }
