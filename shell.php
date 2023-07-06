@@ -1,5 +1,14 @@
 <?php
 
+pcntl_async_signals(true);
+function handler($signal) {
+    echo "caught signal $signal\n";
+}
+pcntl_signal(SIGINT, "handler");
+pcntl_signal(SIGHUP, "handler");
+pcntl_signal(SIGUSR1, "handler");
+pcntl_signal(SIGTERM, "handler");
+
 $start = microtime(true);
 $output = "";
 $cmd = "./new";
@@ -12,7 +21,7 @@ while (microtime(true) - $start < 1) {
 }
 
 $time = microtime(true) - $start;
-printf("PHP SHELL: Ran %d times in %f seconds.", $i, $time);
+printf("PHP SHELL: Ran %d times in %f seconds.\n", $i, $time);
 
 function shellout(string $cmd): array {
     $descriptors = [

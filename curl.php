@@ -1,5 +1,8 @@
 <?php
 
+// TODO try curl multi handles:
+// https://www.php.net/manual/en/function.curl-multi-exec.php
+
 $start = microtime(true);
 $output = "";
 

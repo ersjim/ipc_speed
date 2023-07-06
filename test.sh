@@ -11,20 +11,20 @@ gcc -o shell shell.c -g0 -O3 -march=native
 go build main.go
 
 echo
-php ./shell.php
+time php ./shell.php
 
 echo
-./main
+time ./main
 
 echo
-./shell
+time ./shell
 
 echo
-php ./curl.php
+# time php ./curl.php
 
 echo
 echo "cleaning up"
-rm -f new main shell
+# rm -f new main shell
 echo "done"
 echo --------
 echo
