@@ -1,13 +1,23 @@
 #!/bin/bash
 
+echo "compiling"
 gcc -o new new.c -O3 -g0 -march=native
 
+echo
 php ./shell.php
 
-echo "run node new.js in another window and press enter"
+echo
+echo
+echo ========================
+echo "run 'node new.js' in another window and press enter"
+echo ========================
 read
 
 php ./curl.php
+echo
+echo "done"
+echo --------
+echo
 
 # # Start the timer
 # start=$(date +%s.%N)

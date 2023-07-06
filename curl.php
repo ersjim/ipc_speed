@@ -10,7 +10,7 @@ while (microtime(true) - $start < 1) {
 }
 
 $time = microtime(true) - $start;
-printf("%s\n====\nran %d times in %f seconds.", $output, $i, $time);
+printf("%d chars written. Ran %d times in %f seconds.", strlen($output), $i, $time);
 
 function curlout(string $url): string
 {
