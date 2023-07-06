@@ -2,13 +2,22 @@
 
 echo "compiling"
 gcc -o new new.c -O3 -g0 -march=native
+gcc -o shell shell.c -fsanitize=address -fsanitize=null -fsanitize=undefined -Wall -Wextra -g3 -Og
+go build main.go
 
 echo "testing php shell version"
 php ./shell.php
 
 echo
 echo "testing go shell version"
-go run main.go
+./main
+
+echo
+echo "testing c shell version"
+./shell
+
+echo "cleaning up"
+rm -f new main shell
 
 echo
 echo
