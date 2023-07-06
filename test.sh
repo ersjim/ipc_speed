@@ -3,8 +3,12 @@
 echo "compiling"
 gcc -o new new.c -O3 -g0 -march=native
 
-echo "testing shell version"
+echo "testing php shell version"
 php ./shell.php
+
+echo
+echo "testing go shell version"
+go run main.go
 
 echo
 echo

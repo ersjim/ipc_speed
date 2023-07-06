@@ -10,7 +10,7 @@ while (microtime(true) - $start < 1) {
 }
 
 $time = microtime(true) - $start;
-printf("%d chars written. Ran %d times in %f seconds.", strlen($output), $i, $time);
+printf("PHP CURL: Ran %d times in %f seconds.", $i, $time);
 
 function curlout(string $url): string
 {

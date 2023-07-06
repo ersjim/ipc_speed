@@ -12,7 +12,7 @@ while (microtime(true) - $start < 1) {
 }
 
 $time = microtime(true) - $start;
-printf("%d chars written. Ran %d times in %f seconds.", strlen($output), $i, $time);
+printf("PHP SHELL: Ran %d times in %f seconds.", $i, $time);
 
 function shellout(string $cmd): array {
     $descriptors = [
