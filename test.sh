@@ -3,7 +3,7 @@
 echo "compiling"
 gcc -o new new.c -O3 -g0 -march=native
 
-echo
+echo "testing shell version"
 php ./shell.php
 
 echo
@@ -13,6 +13,7 @@ echo "run 'node new.js' in another window and press enter"
 echo ========================
 read
 
+echo "testing curl version"
 php ./curl.php
 echo
 echo "done"
