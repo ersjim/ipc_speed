@@ -3,24 +3,24 @@
 echo ========================
 echo "run 'node new.js' in another window and press enter"
 echo ========================
-read
+#read
 
-echo "compiling"
-gcc -o new new.c -O3 -g0 -march=native
-gcc -o shell shell.c -g0 -O3 -march=native
-go build main.go
+#echo "compiling"
+#gcc -o new new.c -O3 -g0 -march=native
+#gcc -o shell shell.c -g0 -O3 -march=native
+#go build main.go
+#
+#echo
+#time php ./shell.php
+#
+#echo
+#time ./main
+#
+#echo
+#time ./shell
 
 echo
-time php ./shell.php
-
-echo
-time ./main
-
-echo
-time ./shell
-
-echo
-# time php ./curl.php
+time php ./curl.php
 
 echo
 echo "cleaning up"
